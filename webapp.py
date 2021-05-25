@@ -52,13 +52,24 @@ collection = db['Finalp'] #1. put the name of your collection in the quotes
 def inject_logged_in():
     return {"logged_in":('github_token' in session)}
 
-
-
-
 @app.route('/')
 def home():
     return render_template('home.html')
 
+
+
+@app.route('/posted', methods=['POST'])
+def post():
+    try;
+        text = request.form['messsage']
+        post={"username":session['user_data']['login'],"message":text} 
+        collection.insert_one(post);
+    except Exception as inst:
+        print(inst)
+    return render_template('home.html', past_posts=posts_to_html())
+    
+    
+    
 @app.route('/action_page')
 def action_page():
     return render_template('home.html')
