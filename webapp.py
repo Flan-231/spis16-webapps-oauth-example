@@ -52,6 +52,9 @@ collection = db['Finalp'] #1. put the name of your collection in the quotes
 def inject_logged_in():
     return {"logged_in":('github_token' in session)}
 
+
+
+
 @app.route('/')
 def home():
     return render_template('home.html')
