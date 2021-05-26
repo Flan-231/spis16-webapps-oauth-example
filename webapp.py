@@ -56,7 +56,7 @@ def inject_logged_in():
 def home():
     return render_template('home.html')
 
-@app.route ('/posted', methods=['POST'])
+@app.route ('/action_page', methods=['POST'])
 def post():
     try:
         text= request.form['fname']
@@ -67,11 +67,7 @@ def post():
         
     return render_template('home.html', past_posts=posts_to_html())
 
-    
-@app.route('/action_page')
-def action_page():
-    return render_template('home.html')
-
+   
 #redirect to GitHub's OAuth page and confirm callback URL
 @app.route('/login')
 def login():   
