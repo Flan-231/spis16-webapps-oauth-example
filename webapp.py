@@ -54,7 +54,7 @@ def inject_logged_in():
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+  
 
 @app.route ('/action_page', methods=['POST'])
 def post():
@@ -65,7 +65,9 @@ def post():
     except Exception as inst:
         print(inst)
         
-    return render_template('home.html', past_posts=posts_to_html())
+  #  return render_template('home.html', past_posts=posts_to_html())   
+
+    return render_template('home.html')
 
    
 #redirect to GitHub's OAuth page and confirm callback URL
