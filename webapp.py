@@ -67,7 +67,7 @@ def post():
         
   #  return render_template('home.html', past_posts=posts_to_html())   
 
-    return render_template('home.html', comment=collection.find())
+    return render_template('home.html', comment=pprint.pformat (collection.find()))
 
    
 #redirect to GitHub's OAuth page and confirm callback URL
