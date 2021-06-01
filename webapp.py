@@ -69,6 +69,10 @@ def post():
 
     return render_template('home.html', comment=pprint.pformat (collection.find()))
 
+for comment in collection.find():
+    texToShow = "":
+    textToShow = textToShow + post:
+comment=pprint.pformat (collection.find()))
    
 #redirect to GitHub's OAuth page and confirm callback URL
 @app.route('/login')
