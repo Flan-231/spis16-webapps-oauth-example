@@ -71,8 +71,8 @@ def post():
 
 for comment in collection.find():
     texToShow = "";
-    textToShow = textToShow + post:
-comment=pprint.pformat (collection.find()))
+    textToShow = textToShow + post;
+return comment=pprint.pformat (collection.find()))
    
 #redirect to GitHub's OAuth page and confirm callback URL
 @app.route('/login')
