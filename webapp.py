@@ -65,9 +65,10 @@ def post():
     except Exception as inst:
         print(inst)
         
+        
     for post in collection.find():
-        textToShow = "";
-        textToShow = textToShow + post;
+        textToShow = ""; 
+        textToShow = textToShow + str(post);
         
   #  return render_template('home.html', past_posts=posts_to_html())   
     return render_template('home.html', comment=textToShow )
