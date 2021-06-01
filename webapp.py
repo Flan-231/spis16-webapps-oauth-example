@@ -70,7 +70,7 @@ def post():
     return render_template('home.html', comment=pprint.pformat (collection.find()))
 
 for comment in collection.find():
-    texToShow = "":
+    texToShow = "";
     textToShow = textToShow + post:
 comment=pprint.pformat (collection.find()))
    
