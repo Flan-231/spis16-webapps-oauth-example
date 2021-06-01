@@ -6,3 +6,12 @@ body {
 #content {
      margin-left: 20px;
 }
+
+
+header {
+  background-color: #a1c942;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: black;
+}
