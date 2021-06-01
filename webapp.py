@@ -65,15 +65,14 @@ def post():
     except Exception as inst:
         print(inst)
         
+    for post in collection.find():
+        texToShow = "";
+        textToShow = textToShow + post;
+        
   #  return render_template('home.html', past_posts=posts_to_html())   
+    return render_template('home.html', comment=textToShow )
 
-    return render_template('home.html', comment=pprint.pformat (collection.find()))
 
-for comment in collection.find():
-    texToShow = "";
-    textToShow = textToShow + post;
-return comment=pprint.pformat (collection.find()))
-   
 #redirect to GitHub's OAuth page and confirm callback URL
 @app.route('/login')
 def login():   
