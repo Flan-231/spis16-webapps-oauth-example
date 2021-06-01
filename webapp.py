@@ -66,7 +66,7 @@ def post():
         print(inst)
         
     for post in collection.find():
-        texToShow = "";
+        textToShow = "";
         textToShow = textToShow + post;
         
   #  return render_template('home.html', past_posts=posts_to_html())   
