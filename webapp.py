@@ -68,7 +68,7 @@ def post():
         
     for post in collection.find():
         textToShow = ""; 
-        textToShow = textToShow + str(post["Username"] + post["fname"] );
+        textToShow = textToShow + str(post["username"] + post["fname"] );
         
   #  return render_template('home.html', past_posts=posts_to_html())   
     return render_template('home.html', comment=textToShow )
